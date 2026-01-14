@@ -1,0 +1,16 @@
+{
+    "name": "RA-Docker-Umgebung",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "dan-c-underwood.arm"
+            ]
+        }
+    },
+    "postCreateCommand": "chmod +x /workspaces/${localWorkspaceFolderBasename}/setup_ra.sh && echo 'source /workspaces/${localWorkspaceFolderBasename}/setup_ra.sh' >> ~/.bashrc",
+    "remoteUser": "root"
+}
